@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-5">
+  <div class="card shadow p-4">
+    <h2 class="text-center mb-4 text-primary">
+      {% if form.instance.pk %}
+        ✏️ Update Company Details
+      {% else %}
+        ➕ Add New Company
+      {% endif %}
+    </h2>
+
+    <form method="POST" enctype="multipart/form-data" class="form">
+      {% csrf_token %}
+
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          {{ form.as_p }}
+        </div>
+      </div>
+
+      {% if form.instance.pk and form.instance.logo %}
+      <div class="text-center mt-3">
+        <label class="form-label">Current Logo:</label><br>
+        <img src="{{ form.instance.logo.url }}" alt="Logo" class="img-thumbnail mb-3" width="150">
+      </div>
+      {% endif %}
+
+      <div class="text-center mt-3">
+        <button type="submit" class="btn btn-success">
+          {% if form.instance.pk %}Update{% else %}Add{% endif %}
+        </button>
+        <a href="{% url 'list' %}" class="btn btn-secondary ms-2">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

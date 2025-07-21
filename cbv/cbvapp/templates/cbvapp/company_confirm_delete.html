@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-danger">Confirm Deletion</h2>
+    <p>Are you sure you want to delete <strong>{{ company.name }}</strong>?</p>
+    <form method="post">
+        {% csrf_token %}
+        <a href="{% url 'list' %}" class="btn btn-secondary">CANCEL</a>
+        <button type="submit" class="btn btn-danger">DELETE</button>
+    </form>
+</div>
+{% endblock %}
