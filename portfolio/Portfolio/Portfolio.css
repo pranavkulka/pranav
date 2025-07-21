@@ -1,0 +1,329 @@
+/* Portfolio.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+nav {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav h1 {
+    font-size: 1.8rem;
+}
+
+nav .links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav .links a:hover {
+    color: #ffc107;
+}
+
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.home img.prof-img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin: 1rem;
+}
+
+.home .text h1 {
+    font-size: 2.5rem;
+    color: #343a40;
+}
+
+.home .text h2 {
+    font-size: 1.5rem;
+    color: #6c757d;
+}
+
+.about {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .text {
+    max-width: 600px;
+    margin: 1rem;
+}
+
+.about img.prof-img {
+    max-width: 300px;
+    width: 100%;
+    margin: 1rem;
+    border-radius: 50%;
+}
+
+.stick {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.skill {
+    padding: 3rem 2rem;
+    background-color: #f1f1f1;
+}
+
+.soft-lang {
+    margin-bottom: 2rem;
+}
+
+.soft-lang h2 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.soft-lang .tab {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.soft-lang .tab img {
+    max-width: 60px;
+    height: auto;
+}
+
+.project {
+    padding: 3rem 2rem;
+    background-color: #ffffff;
+}
+
+.all-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.proj-container {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.proj-container img {
+    width: 100%;
+    border-radius: 5px;
+    height: auto;
+}
+
+.proj-details h2 {
+    margin-top: 1rem;
+    color: #343a40;
+}
+
+.proj-details p {
+    color: #6c757d;
+}
+
+.proj-details .btns a {
+    margin: 0.5rem;
+    display: inline-block;
+}
+
+.proj-details .btns svg {
+    width: 30px;
+    height: 30px;
+    fill: #007bff;
+    transition: 0.3s;
+}
+
+.proj-details .btns svg:hover {
+    fill: #0056b3;
+}
+.certification {
+    padding: 3rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.cert-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.cert-card {
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.cert-card h3 {
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+.cert-card p {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.cert-card a {
+    display: inline-block;
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cert-card a:hover {
+    text-decoration: underline;
+}
+
+.contact {
+    background-color: #f8f9fa;
+    padding: 3rem 2rem;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.left, .right {
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+}
+
+.left-bottom a img {
+    width: 40px;
+    margin: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.left-bottom a img:hover {
+    transform: scale(1.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 0.8rem;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+form button dotlottie-player {
+    margin-left: 10px;
+}
+.resume-button-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.resume-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.resume-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav .links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav .links a {
+        margin: 0.5rem 0;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+    }
+}
